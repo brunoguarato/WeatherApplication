@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/weather_back_pot"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="fill_parent"
+        android:layout_height="178dp"
+        android:layout_weight="0.67"
+        tools:context=".MainActivity" >
+
+        <!-- Image weather condition -->
+
+        <TextView
+            android:id="@+id/minmax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/temp"
+            android:layout_marginBottom="60dp"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/unittemp"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/temp"
+            android:paddingRight="20dp"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/unittemp"
+            android:textColor="#fff"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/date_mon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/date_mon"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fff"
+            android:textSize="60dp" />
+
+        <TextView
+            android:id="@+id/cityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/cityText"
+            android:layout_alignTop="@+id/temp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                android:id="@+id/week_day1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/week_day2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+               />
+
+            <TextView
+                android:id="@+id/week_day3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+             <com.survivingwithandroid.weatherapp.CustomViewPager
+        android:id="@+id/pager"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="left"
+        android:layout_height="30dp" >
+    </com.survivingwithandroid.weatherapp.CustomViewPager>
+    
+             
+    <com.survivingwithandroid.weatherapp.CustomViewPager
+        android:id="@+id/pager1"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        
+        android:layout_height="30dp" >
+
+    </com.survivingwithandroid.weatherapp.CustomViewPager>
+    
+    <com.survivingwithandroid.weatherapp.CustomViewPager
+        android:id="@+id/pager2"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:layout_height="30dp" >
+    </com.survivingwithandroid.weatherapp.CustomViewPager>
+            
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
